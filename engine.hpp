@@ -73,10 +73,14 @@ protected:
         static void glError(GLenum src, GLenum type,
                         GLenum id, GLenum sev, GLsizei len,
                         const GLchar* msg, const void* up);
+
         static void onKeyboardInput(GLFWwindow* wnd, int key,
                         int sc, int action, int mods);
         static void onMouseInput(GLFWwindow* wnd, double x, double y);
         static void onMouseButton(GLFWwindow* wnd, int button,
                         int action, int mods);
+        static void onFramebufferResize(GLFWwindow* wnd, int width, int height);
+        static void onWindowMoved(GLFWwindow* wnd, int x, int y);
+        static void onWindowResized(GLFWwindow* wnd, int width, int height);
 };
 

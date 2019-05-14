@@ -14,6 +14,10 @@ int main(int argc, char* argv[])
 
         std::vector<std::string> args;
 
+        /*
+         * Parse command-line arguments into a vector for easy processing
+         * by the actual application.
+         */
         for(int i = 1; i < argc; i++) {
 
                 args.push_back(std::string(argv[i]));
@@ -22,6 +26,9 @@ int main(int argc, char* argv[])
         engine.setArgs(args);
 
         try {
+                /*
+                 * Create a window to draw to
+                 */
                 engine.startUp(800, 600, "Title!", false);
 
                 while(engine.shouldRun()) {
